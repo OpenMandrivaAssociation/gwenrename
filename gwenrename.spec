@@ -1,6 +1,6 @@
 %define name gwenrename
 %define version 1.0.2
-%define release %mkrel 2
+%define release %mkrel 1
 %define qtdir   %{_prefix}/lib/qt3/%{_lib}
 
 Name: 		%name
