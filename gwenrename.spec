@@ -1,14 +1,14 @@
 %define name gwenrename
-%define version 1.0.2
-%define release %mkrel 1
+%define preversion beta3
+%define version 1.1
+%define release %mkrel 0.%{preversion}.1
 %define qtdir   %{_prefix}/lib/qt3/%{_lib}
 
 Name: 		%name
 Version: 	%version
 Release: 	%release
 Summary: 	GwenRename is a series (batch) renaming tool
-Source:  	%{name}-%{version}.tar.gz
-Patch0:		fabout.ui.h.patch.bz2
+Source:  	%{name}-%{version}-%{preversion}.tar.gz
 URL: 	        http://users.otenet.gr/~geosp/gwenrename/index.html
 Group: 		File tools
 License: 	GPL
@@ -25,12 +25,7 @@ extraction, file's timestamping and use of profiles.
 %prep
 rm -rf $RPM_BUILD_ROOT
 
-%setup -q -n %name-%{version}
-(
-cd gwenrename
-%patch0 -b wrong_string
-cd ..
-)
+%setup -q -n %name-%{version}-%{preversion}
 
 %build
 QTDIR=%{qtdir}
@@ -59,18 +54,19 @@ ln -s %_datadir/icons/hicolor/16x16/apps/%name.png %buildroot/%_miconsdir
 
 %files -f %name.lang
 %defattr(-,root,root,0755)
-%doc authors copying ChangeLog todo install readme
+%doc AUTHORS COPYING ChangeLog TODO INSTALL README
 %_bindir/%name
 %_datadir/apps/gwenview/tools/%name.desktop
 %_datadir/apps/konqueror/servicemenus/konqgwenrename.desktop
-%_datadir/icons/hicolor/16x16/apps/%name-gray.png
-%_datadir/icons/hicolor/16x16/apps/%name.png
-%_datadir/icons/hicolor/22x22/apps/%name.png
-%_datadir/icons/hicolor/32x32/apps/%name.png
-%_datadir/icons/hicolor/48x48/apps/%name.png
-%_datadir/icons/hicolor/64x64/apps/%name.png
-%_datadir/icons/locolor/16x16/apps/%name.png
-%_datadir/icons/locolor/32x32/apps/%name.png
+%_datadir/applnk/Utilities/%name.desktop
+%_datadir/apps/%name/*
+%_datadir/icons/hicolor/16x16/apps/*
+%_datadir/icons/hicolor/22x22/apps/*
+%_datadir/icons/hicolor/32x32/apps/*
+%_datadir/icons/hicolor/48x48/apps/*
+%_datadir/icons/hicolor/64x64/apps/*
+%_datadir/icons/locolor/16x16/apps/*
+%_datadir/icons/locolor/32x32/apps/*
 %_iconsdir/%{name}.png
 %_miconsdir/%{name}.png
 %_liconsdir/%{name}.png
