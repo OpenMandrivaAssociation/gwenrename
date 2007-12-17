@@ -12,7 +12,6 @@ Source:  	%{name}-%{version}-%{preversion}.tar.gz
 URL: 	        http://users.otenet.gr/~geosp/gwenrename/index.html
 Group: 		File tools
 License: 	GPL
-BuildRoot: 	%_tmppath/%{name}-%{version}
 BuildRequires:  kdelibs-devel 
 
 %description
