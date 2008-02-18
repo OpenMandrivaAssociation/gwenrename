@@ -7,7 +7,7 @@
 Name: 		%name
 Version: 	%version
 Release: 	%release
-Summary: 	GwenRename is a series (batch) renaming tool
+Summary: 	Series (batch) renaming tool
 Source:  	%{name}-%{version}-%{preversion}.tar.gz
 URL: 	        http://users.otenet.gr/~geosp/gwenrename/index.html
 Group: 		File tools
