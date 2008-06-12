@@ -46,11 +46,15 @@ ln -s %_datadir/icons/hicolor/16x16/apps/%name.png %buildroot/%_miconsdir
 
 %find_lang %name
 
+%if %mdkversion < 200900
 %post
 %update_menus
+%endif
 
+%if %mdkversion < 200900
 %postun
 %clean_menus
+%endif
 
 %files -f %name.lang
 %defattr(-,root,root,0755)
