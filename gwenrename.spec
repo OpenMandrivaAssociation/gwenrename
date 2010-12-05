@@ -1,7 +1,7 @@
 %define name gwenrename
 %define preversion beta7
 %define version 1.1
-%define release %mkrel 0.%{preversion}.1
+%define release %mkrel 0.%{preversion}.2
 
 Name: 		%name
 Version: 	%version
