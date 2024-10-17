@@ -8,7 +8,7 @@ Version: 	%version
 Release: 	%release
 Summary: 	Series (batch) renaming tool
 Source:  	http://members.hellug.gr/sng/gwenrename/%{name}-%{version}-%{preversion}.tar.gz
-URL: 	        http://users.otenet.gr/~geosp/gwenrename/index.html
+URL: 	        https://users.otenet.gr/~geosp/gwenrename/index.html
 Group: 		File tools
 License: 	GPLv2+
 BuildRoot: 	%_tmppath/%{name}-%{version}
