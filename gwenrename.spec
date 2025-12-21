@@ -12,6 +12,7 @@ URL: 	        https://users.otenet.gr/~geosp/gwenrename/index.html
 Group: 		File tools
 License: 	GPLv2+
 BuildRoot: 	%_tmppath/%{name}-%{version}
+BuildRequires:	make
 BuildRequires:  kdelibs4-devel 
 
 %description
